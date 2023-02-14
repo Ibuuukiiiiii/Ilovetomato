@@ -1,0 +1,12 @@
+<%= form_for @alitz do |f| %>
+    <%= f.label :日本語訳 %>
+    <%= f.text_field :phrase, :size => 140 %> 
+
+    <%= f.label :フレーズ %>
+    <%= f.text_field :translation, :size => 140 %> 
+
+    <%= f.label :読み %>
+    <%= f.text_field :read, :size => 140 %> 
+
+    <%= f.submit "編集する" %>
+  <% end %>

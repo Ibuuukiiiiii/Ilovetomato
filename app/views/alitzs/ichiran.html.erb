@@ -1,0 +1,22 @@
+<h3>一覧ページ</h3>
+
+<div class="aitzs-container">
+
+
+<% @alitzs.each do |t| %>
+    <div class="alitz">
+      
+      <%= t.phrase %>
+      <%= t.translation %>
+      <%= t.read %>
+      <% t.tags.each do |tag| %>
+        <%= tag.name %>
+    <% end %>
+      <%= link_to "詳細へ", alitz_path(t.id) %> 
+      <%= link_to "編集する", edit_alitz_path(t.id) %>
+      <%= button_to "削除する", alitz_path(t.id), method: :delete %>
+      <%= link_to t.user.name, user_path(t.user.id) %>
+      <%= image_tag t.user.image_url, size: "250x200" if t.user.image? %>
+      <%= t.user.email %>
+    </div>
+   <% end %>

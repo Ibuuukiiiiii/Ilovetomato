@@ -1,0 +1,59 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.roguin2{
+    position: absolute;
+  width: 900px;
+  height: 500px;
+  left: 300px;
+  top: 200px;
+  background: rgba(180, 180, 180, 0.6);
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-style: italic;
+  
+
+}
+.roguin2 h2{
+    font-family: 'Capitaly Script PERSONAL USE';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100px;
+    text-align: center;
+}
+.roguin3{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+}
+
+.touroku2{
+    position: absolute;
+    width: 1099px;
+    height: 689px;
+    left: 190px;
+    top: 134px;
+    
+    background: rgba(175, 205, 127, 0.6);
+}
+
+.touroku2 h2{
+    font-family: 'Capitaly Script PERSONAL USE';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.touroku3{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    line-height: 40px;
+}

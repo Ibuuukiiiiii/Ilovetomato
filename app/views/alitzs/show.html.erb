@@ -1,0 +1,13 @@
+<h1>自分の題名</h1>
+<h3>フレーズの詳細へ</h3>
+<div class="alitz">
+  <p><%= @alitz.translation %></p>
+  <p><%= @alitz.read %></p>
+</div>
+
+<%= link_to "投稿一覧に戻る", alitzs_path %>
+<%= link_to "編集する", edit_alitz_path(@alitz.id) %>
+
+<% @alitz.tags.each do |tag| %>
+  <span><%= tag.name %></span>
+  <% end %>

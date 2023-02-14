@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/bc5a65817a.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
+
+  </head>
+
+<body>
+<div class="container">
+<div class="img">
+  
+</div>
+
+  <header>
+  <h1><a href="/alitzs">dialogo</a><h1>
+    <div class="header-list">
+    
+      <ul>
+       
+
+        
+          
+          <a class="fa-solid fa-user" href="/users/sign_in"></a>
+      <% if user_signed_in? %>
+      <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+      
+   
+  <% end %>
+    
+    
+    </ul>
+         
+         
+
+
+      </ul>
+    </div>
+ 
+
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+
+  </body>
+
+</html>
+
+
+
