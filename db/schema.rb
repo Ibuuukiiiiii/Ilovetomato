@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_17_112427) do
+ActiveRecord::Schema.define(version: 2023_02_21_173844) do
+
+  create_table "alitz_tag2_relations", force: :cascade do |t|
+    t.integer "alitz_id", null: false
+    t.integer "tag2_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["alitz_id"], name: "index_alitz_tag2_relations_on_alitz_id"
+    t.index ["tag2_id"], name: "index_alitz_tag2_relations_on_tag2_id"
+  end
 
   create_table "alitz_tag_relations", force: :cascade do |t|
     t.integer "alitz_id", null: false
@@ -23,6 +32,12 @@ ActiveRecord::Schema.define(version: 2023_01_17_112427) do
 
 # Could not dump table "alitzs" because of following StandardError
 #   Unknown type 'stringg' for column 'category'
+
+  create_table "tag2s", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "tags", force: :cascade do |t|
     t.string "name"
@@ -45,6 +60,8 @@ ActiveRecord::Schema.define(version: 2023_01_17_112427) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "alitz_tag2_relations", "alitzs"
+  add_foreign_key "alitz_tag2_relations", "tag2s"
   add_foreign_key "alitz_tag_relations", "alitzs"
   add_foreign_key "alitz_tag_relations", "tags"
 end

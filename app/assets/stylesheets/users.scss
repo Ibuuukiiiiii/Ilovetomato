@@ -57,3 +57,99 @@
     transform: translate(-50%, -50%);  
     line-height: 40px;
 }
+
+
+
+.introduction{
+    position: absolute;
+    text-align: center;
+    width: 1482px;
+    top: 10%;
+    left: 50px;
+
+    font-family: 'Capitaly Script PERSONAL USE';
+    writing-mode: horizontal-tb;
+    background: rgba(0, 0, 0, 0.5);
+    font-weight: 100;
+    font-size: 48px;
+    line-height: 83px;
+    
+
+    color: #ffffffcf;
+
+    mix-blend-mode: multiply;
+
+}
+
+
+
+.show h2 {
+   font-size: large;
+background-color: #000000bd;
+color:#ffffffcf;
+margin-left: 90%;
+width: 10%;
+text-align: right
+}
+
+.show a{
+font-size: large;
+ background-color: #000000bd;
+ color:#ffffffcf;
+ width: 10%;
+ margin-left: 90%;
+ text-align: right
+ }
+
+.show h3{
+    text-align: left;
+    width: 50%;
+    font-size: 20px;
+    margin-left: 30%;
+    line-height: 10px;
+
+
+
+}
+
+.show2 a{
+    text-decoration: none;
+    color: black;   
+    font-family: 'Capitaly Script PERSONAL USE';
+    writing-mode: horizontal-tb;
+    margin-left: 1000px;
+    font-weight: 100;
+    font-size: 48px;
+    line-height: 83px; 
+}
+
+.show3 a{
+    position: absolute;
+    text-decoration: none;
+    color: black;       
+    font-family: 'Capitaly Script PERSONAL USE';
+    writing-mode: horizontal-tb;
+    margin-left: 1000px;
+    font-weight: 150;
+    font-size: 40px;
+    line-height: 82px; 
+}
+
+.edit{
+ text-align: center;
+ background-color: rgba(163, 176, 90, 0.6);
+
+}
+
+.toukou{
+    text-align: center;
+    background-color: rgba(86, 165, 171, 0.71); 
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 30px;
+}
+
+.toukou a{
+    text-decoration: none;
+    color: black; 
+}

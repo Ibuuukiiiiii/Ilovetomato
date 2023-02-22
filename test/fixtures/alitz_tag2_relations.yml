@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alitz: one
+  tag2: one
+
+two:
+  alitz: two
+  tag2: two

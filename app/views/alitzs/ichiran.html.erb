@@ -1,7 +1,10 @@
-<h3>一覧ページ</h3>
-
-<div class="aitzs-container">
-
+<div class= "all">
+<h3>フレーズ一覧</h3>
+<div class="alitzs-ichiran">
+<h4><%= link_to "道案内", "/alitzs/michiannai" %>
+　　<%= link_to "日常会話", "/alitzs/kaiwa" %>
+　　<%= link_to "会話に困ったとき", "/alitzs/komatta" %></h4>
+</div>
 
 <% @alitzs.each do |t| %>
     <div class="alitz">
@@ -9,7 +12,7 @@
       <%= t.phrase %>
       <%= t.translation %>
       <%= t.read %>
-      <% t.tags.each do |tag| %>
+    <% t.tags.each do |tag| %>
         <%= tag.name %>
     <% end %>
       <%= link_to "詳細へ", alitz_path(t.id) %> 
@@ -19,4 +22,6 @@
       <%= image_tag t.user.image_url, size: "250x200" if t.user.image? %>
       <%= t.user.email %>
     </div>
-   <% end %>
+<% end %>
+
+</div>

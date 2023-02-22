@@ -2,17 +2,21 @@ class AlitzsController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create]
 
     def index
-        @alitzs = Alitz.all
-        
-        if params[:tag_ids]
-            @alitzs = []
-            params[:tag_ids].each do |key, value|      
-              @alitzs += Tag.find_by(name: key).alitzs if value == "1"
-            end
-            @alitzs.uniq!
-          end
-        
+      @alitz = Alitz.all
+
+    # 以下を追記
+    if params[:tag2_ids]
+      @alitz = []
+      params[:tag2_ids].each do |key, value|
+        if value == "1"
+          tag2_alitzs = Tag2.find_by(name: key).alitzs
+          @alitz = @alitz.empty? ? tag2_alitzs : @alitz & tag2_alitzs
+        end
+      end
     end
+    end
+
+   
 
 
     def new
@@ -67,9 +71,16 @@ class AlitzsController < ApplicationController
         @komattas = Alitz.where(category:"komatta") #ここがポイント！categoryのバリューがkomattaの投稿を取得！
       end
 
+      def ichiran
+       @alitzs = Alitz.all
+      end
+
+      def about
+      end
+
       private
     def alitz_params
-        params.require(:alitz).permit(:phrase, :translation, :read, :category, :body, :cotent, tag_ids: [])
+        params.require(:alitz).permit(:phrase, :translation, :read, :category, :body, :cotent, tag_ids: [],tag2_ids: [])
     end
 
 end

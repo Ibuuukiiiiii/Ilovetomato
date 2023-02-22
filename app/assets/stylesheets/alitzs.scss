@@ -2,16 +2,119 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-  .aitzs-container{
-    background-image: url("../assets/jisho.jpg");
-   font-size: 20px;
+  .container{
+    background-image: url("Jisho.png");
+   width:100%;
+   height: 1050px;
+
+   
   }
+  .jishon{
+position: absolute;
+  padding-top:50px;
+  font-size: 25px;
+  line-height: 35px;
+  left: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 50;
+  background-color: rgba(255, 255, 255, 0.5);;
+  color:rgb(0, 0, 0)
+  }
+
+  .jishon2{
+    font-size: 300%;
+  }
+
+
+.jishon3 a{
+  text-decoration: none;
+  color: black;  
+  position: relative;
+    height: 100px;
+    width: 700px;
+    left: 850px;
+    top: 0px;
+    font-size: 40px
+}
+.text1{
+  position: absolute;
+width: 742px;
+height: 579px;
+left: 9px;
+top: 362px;
+
+font-family: 'Lexend';
+font-style: normal;
+font-weight: 400;
+font-size: 56px;
+line-height: 80px;
+display: flex;
+align-items: center;
+
+color: #161716;
+}
+
+
   .container p{
     position: absolute;
     height: 733px;
-    width: 1440px;
+    width: 100%;
     left: 0px;
     top: 291px;
     border-radius: 0px;
 
   }
+
+ 
+.boxbackground {
+  position: relative;
+  width: 100%;
+  height: 1050px;
+  background-image: image-url("About.png");
+  background-size: cover;
+}
+.box1 {
+  position: absolute;
+  width: 100%;
+  height:1050px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding-top:50px;
+  font-size: 40px;
+  line-height: 83px;
+  color: rgba(255, 255, 255, 1);
+
+}
+
+.kirin1 a{
+  text-decoration: none;
+  color: black; 
+}
+.kirin2 a{
+  text-decoration: none;
+  color: black; 
+}
+
+
+
+.alitzs-ichiran h4{
+font-size: 25px;
+width:500px;
+text-align: left;
+display:flex;
+}
+
+.alitzs-ichiran a{
+  text-decoration: none;
+  color: black; 
+}
+
+.all h3{
+  font-size: 40px;
+}
+
+.modoru a{
+  text-decoration: none;
+  color: black; 
+  font-size: 20px;
+}

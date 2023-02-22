@@ -1,19 +1,26 @@
-h1>users#show</h1>
-<p>名前 : <%= @user.name %></p>
-<p>メールアドレス : <%= @user.email %></p>
-<p>プロフィール : <%= @user.profile %></p>
-
+<div class="show">
+<h2><%= @user.name %>さん</h2>
+<h2><%= @user.email %></h2>
+<h2>プロフィール : <%= @user.profile %></h2>
 <% if current_user.id == @user.id %>
-  <%= link_to "編集する", edit_user_registration_path %>
+  <%= link_to "編集", edit_user_registration_path %>
 <% end %>
 
-<h2>ユーザーの投稿一覧</h2>
+<h3>ユーザーの投稿一覧</h3>
 <% @user.alitzs.each do |t| %>
   <%= t.user.name %>
   <%= t.phrase %>
 <% end %>
+</div>
 
+<div class="show2">
 <%= link_to "新規投稿へ", new_alitz_path %>
+</div>
 
+<div class="show3">
 <%= link_to "フレーズ一覧に戻る", alitzs_path %>
+</div>
+
 <%= image_tag @user.image_url, size: "250x200" if @user.image? %>
+</div>
+

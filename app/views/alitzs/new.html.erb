@@ -1,4 +1,4 @@
-
+<div class= "toukou">
 <h3>新規投稿</h3>
 <%= form_for @alitz do |f| %>
 
@@ -18,7 +18,7 @@
 </div>
 
 <div class='form-group'>
-        <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+        <%= f.collection_check_boxes(:tag2_ids, Tag2.all, :id, :name) do |tag| %>
             <div class='form-check'>
                 <%= tag.label class: 'form-check-label' do %>
                     <%= tag.check_box class: 'form-check-input' %>
@@ -29,12 +29,14 @@
     </div> 
 
 
-<%= f.select :category, [["道案内", "michiannai"], ["かっこよく言いたい", "kaiwa"], ["会話に困る", "komatta"]], include_blank: "どの投稿？" %>
+<%= f.select :category, [["道案内", "michiannai"], ["日常会話", "kaiwa"], ["会話に困る", "komatta"]], include_blank: "どんな場面？" %>
 <%= f.submit "投稿する" %>
 
-<%= f.submit '送信' %>
+
   <% end %>
   <%= link_to "フレーズ一覧に戻る", alitzs_path %>
+  </div>
+
 
   
     
